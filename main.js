@@ -19,30 +19,29 @@ const cardsArr = [
 	{ imageName: "image1", imagePath: "img/cherry.svg" },
 	{ imageName: "image2", imagePath: "img/darts.svg" },
 	{ imageName: "image3", imagePath: "img/dog.svg" },
-	//{ imageName: "image4", imagePath: "img/dolphins.svg" },
-	//{ imageName: "image5", imagePath: "img/fire.svg" },
-	//{ imageName: "image6", imagePath: "img/globus.svg" },
-	//{ imageName: "image7", imagePath: "img/hat.svg" },
-	//{ imageName: "image8", imagePath: "img/lion.svg" },
-	//{ imageName: "image9", imagePath: "img/piano.svg" },
-	//{ imageName: "image10", imagePath: "img/pizza.svg" },
-	//{ imageName: "image11", imagePath: "img/present.svg" },
-	//{ imageName: "image12", imagePath: "img/silly.svg" },
+	{ imageName: "image4", imagePath: "img/dolphins.svg" },
+	{ imageName: "image5", imagePath: "img/fire.svg" },
+	{ imageName: "image6", imagePath: "img/globus.svg" },
+	{ imageName: "image7", imagePath: "img/hat.svg" },
+	{ imageName: "image8", imagePath: "img/lion.svg" },
+	{ imageName: "image9", imagePath: "img/piano.svg" },
+	{ imageName: "image10", imagePath: "img/pizza.svg" },
+	{ imageName: "image11", imagePath: "img/present.svg" },
+	{ imageName: "image12", imagePath: "img/silly.svg" },
 	{ imageName: "image1", imagePath: "img/cherry.svg" },
 	{ imageName: "image2", imagePath: "img/darts.svg" },
 	{ imageName: "image3", imagePath: "img/dog.svg" },
-	//{ imageName: "image4", imagePath: "img/dolphins.svg" },
-	//{ imageName: "image5", imagePath: "img/fire.svg" },
-	//{ imageName: "image6", imagePath: "img/globus.svg" },
-	//{ imageName: "image7", imagePath: "img/hat.svg" },
-	//{ imageName: "image8", imagePath: "img/lion.svg" },
-	//{ imageName: "image9", imagePath: "img/piano.svg" },
-	//{ imageName: "image10", imagePath: "img/pizza.svg" },
-	//{ imageName: "image11", imagePath: "img/present.svg" },
-	//{ imageName: "image12", imagePath: "img/silly.svg" },
+	{ imageName: "image4", imagePath: "img/dolphins.svg" },
+	{ imageName: "image5", imagePath: "img/fire.svg" },
+	{ imageName: "image6", imagePath: "img/globus.svg" },
+	{ imageName: "image7", imagePath: "img/hat.svg" },
+	{ imageName: "image8", imagePath: "img/lion.svg" },
+	{ imageName: "image9", imagePath: "img/piano.svg" },
+	{ imageName: "image10", imagePath: "img/pizza.svg" },
+	{ imageName: "image11", imagePath: "img/present.svg" },
+	{ imageName: "image12", imagePath: "img/silly.svg" },
 ];
 numberOfChangeDesktop.textContent = 0;
-sliderBox.style.width = cardsArr.length / 2 * 20 + 20 + `px`;
 
 cardsArr.sort(function () {
 	return 0.5 - Math.random();
@@ -81,7 +80,7 @@ function flipCard() {
 
 function compareCards() {
 	count++;
-	slider.style.width = count * 20 + `px`;
+	slider.style.width = count * 2 + `%`;
 	numberOfChangeDesktop.textContent = count;
 	let cards = document.querySelectorAll(`img`);
 	cards.forEach(function (item) {
@@ -105,7 +104,7 @@ function compareCards() {
 	if (nOfSamePair == cardsArr.length / 2) {
 		createPopup(`You won`);
 	}
-	if (count > 3) {
+	if (count > 50) {
 		createPopup(`You lose`);
 	}
 	console.log(count);
